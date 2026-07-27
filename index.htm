@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+	<style>
+		
+		button {
+			cursor: pointer;
+		}
+
+		.menu {
+			display: none;
+		}
+
+		.show {
+			display: block;
+		}
+
+		.text {
+			display: none;
+		}
+	</style>
+</head>
+<body>
+
+	<h1>Interactive Example</h1> 
+
+	<h2>Section 1 Lesson</h2>
+
+	<section>
+		
+		<button id="menu-btn">Toggle Menu</button>
+		<button>Show Alert</button>
+		<button>Increment</button>
+		<button>Decrement</button>
+		<button>Reset</button>
+	
+
+		<ul id="menu" class="menu">
+			<li>Home</li>
+			<li>About</li>
+			<li>Services</li>
+			<li>Contact</li>
+		</ul>
+
+		
+		<p>Counter: <span id="counter">0</span></p>
+
+		<label for="name">Enter Your Name:</label>
+		<input type="text" name="name" placeholder="Your name" id="name">
+
+		<button>Greet Me</button>
+
+		<br><br>
+		<p id="text"></p>
+		<button id="par-el">Add Paragraph</button>
+	</section>
+
+
+<script src="index.js"></script>
+</body>
+</html>
