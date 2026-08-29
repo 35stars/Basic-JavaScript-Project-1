@@ -7,11 +7,13 @@ const section = document.querySelector('section')
 const inputName = document.getElementById('name')
 const greetTextEl = document.getElementById('text')
 
-greetTextEl.className = 'p'
-
 menuEl.classList.add('show')
 
 let count = 0
+
+function isValid(name){
+	return /^[a-zA-Z\s]+$/.test(name)
+}
 
 section.addEventListener('click',(e)=>{
 
@@ -40,6 +42,8 @@ section.addEventListener('click',(e)=>{
 		counter.innerText = count
 
 		inputName.value = ''
+
+		document.getElementById('text').innerText = ''
 
 		document.querySelectorAll('.p').forEach(element =>{
 			element.remove()
@@ -70,16 +74,8 @@ section.addEventListener('click',(e)=>{
 	}
 	else if(target.textContent == 'Greet Me'){
 		
-		greetTextEl.textContent = isValid(name) ? `Hi ${name}!` : 'Invalid name!'
-
-		document.getElementById('par-el').insertAdjacentElement("beforebegin",parEl)
-
+		greetTextEl.textContent = isValid(name) ? `Hello ${name}!` : 'Invalid input! Please use letters only.'
 	}
 
 })
 
-
-function isValid(name){
-
-	return /^[a-zA-Z\s]+$/.test(name)
-}
